@@ -14,8 +14,11 @@
     <script type="text/javascript" src="../javascript/javascript.js"></script>
 </head>
 <body onload="createField()">
-    <div id="div_table">
+    <div class="container">
+        <h1>Cross VS Zero</h1>
+        <div id="div_table">
 
+        </div>
     </div>
 </body>
 </html>

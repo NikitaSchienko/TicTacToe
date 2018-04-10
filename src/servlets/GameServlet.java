@@ -45,7 +45,40 @@ public class GameServlet extends HttpServlet
         outStream.close();
     }
 
+    @Override
+    protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException
+    {
+        resp.setContentType("text/plain");
 
+        OutputStream outStream = resp.getOutputStream();
+
+        Integer id = Integer.valueOf(req.getParameter("id"));
+
+        System.out.println("Поле перед отправкой: ");
+
+        for (int i = 0; i < size; i++)
+        {
+            for (int j = 0; j < size; j++)
+            {
+                int currentId = size*i+j;
+                if(currentId == id)
+                {
+                    if(symbol.equals("X"))
+                    {
+                        field[i][j] = 1;
+                    }
+                    else
+                    {
+                        field[i][j] = 2;
+                    }
+                }
+            }
+        }
+        outStream.write(getField(field).getBytes("UTF-8"));
+
+        outStream.flush();
+        outStream.close();
+    }
 
     private String getField(int[][] field)
     {
@@ -59,12 +92,12 @@ public class GameServlet extends HttpServlet
                 {
                     case 0:
                     {
-                        table = table + "<td id=\""+(i*10+j)+"\" class=\"td-cross\" onClick=\"clickOnCell(this)\"></td>\n";
+                        table = table + "<td id=\""+(i*size+j)+"\" class=\"td-none\" onClick=\"clickOnCell(this)\"></td>\n";
                     }
                     break;
                     case 1:
                     {
-                        table = table + "<td class=\"td-zero\"></td>\n";
+                        table = table + "<td class=\"td-cross\"></td>\n";
                     }
                     break;
                     case 2:
