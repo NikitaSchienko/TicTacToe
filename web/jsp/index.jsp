@@ -23,7 +23,7 @@
     </select>
     <br>
     <span>Выберите символ:</span>
-    <p><input name="symbol" type="radio" value="X">X</p>
+    <p><input name="symbol" type="radio" checked="checked" value="X">X</p>
     <p><input name="symbol" type="radio" value="Y">Y</p>
     <br>
     <button onclick="gameButton()">Играть</button>

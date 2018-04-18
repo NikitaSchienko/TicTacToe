@@ -9,6 +9,7 @@ function clickOnCell(cell)
             },
         success : function(response)
         {
+
             // обработка ответа от сервера
             $('#div_table').html(response);
         }

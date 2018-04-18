@@ -13,9 +13,9 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="../javascript/javascript.js"></script>
 </head>
-<body onload="createField()">
+<body class="body" onload="createField()">
     <div class="container">
-        <h1>Cross VS Zero</h1>
+        <h1 class="h1_game">Крестики - Нолики</h1>
         <div id="div_table">
 
         </div>
