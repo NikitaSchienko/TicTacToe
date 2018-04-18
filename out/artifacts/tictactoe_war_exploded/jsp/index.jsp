@@ -6,14 +6,14 @@
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"></script>
     <script type="text/javascript" src="../javascript/javascript.js"></script>
 </head>
-<body>
-<div class="container">
-    <h1>Параметры игры</h1>
-    <span>Введите имя:</span>
-    <input id="name" type="text">
+<body class="body">
+    <h1 class="h1_game">Параметры игры</h1>
+    <div class="container">
+    <p class="span_white">Введите имя:</p>
+    <input class="input_black" id="name" type="text">
     <br>
-    <span>Выберите размер поля:</span>
-    <select id="size">
+    <p class="span_white">Выберите размер поля:</p>
+    <select class="input_black" class="input_black" id="size">
         <option value="3">3x3</option>
         <option value="4">4x4</option>
         <option value="5">5x5</option>
@@ -22,11 +22,11 @@
         <option value="8">8x8</option>
     </select>
     <br>
-    <span>Выберите символ:</span>
-    <p><input name="symbol" type="radio" checked="checked" value="X">X</p>
-    <p><input name="symbol" type="radio" value="Y">Y</p>
+    <p class="span_white">Выберите символ:</p>
+        <span><input class="radio" name="symbol" type="radio" checked="checked" value="X"><img class="image_icon" src="../image/cross.png" alt="cross"></span>
+        <span><input class="radio" name="symbol" type="radio" value="O"><img class="image_icon" src="../image/zero.png" alt="zero"></span>
     <br>
-    <button onclick="gameButton()">Играть</button>
+    <button class="button_black" onclick="gameButton()">Играть</button>
 </div>
 </body>
 </html>

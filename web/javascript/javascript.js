@@ -44,9 +44,18 @@ function createField()
 
 function gameButton()
 {
+
     var name = document.getElementById('name').value;
     var symbol = document.querySelector('input[name=symbol]:checked').value;
     var size = document.getElementById('size').value;
 
-    document.location.href = "jsp/game.jsp?name="+name+"&symbol="+symbol+"&size="+size;
+    if(name.length != 0)
+    {
+        document.location.href = "../jsp/game.jsp?name="+name+"&symbol="+symbol+"&size="+size;
+    }
+    else
+    {
+        alert("Введите, пожалуйста, имя!")
+    }
+
 }

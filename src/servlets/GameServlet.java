@@ -155,7 +155,7 @@ public class GameServlet extends HttpServlet
         System.out.println(X+":"+O);
         if(X == O)
         {
-            result = "Ничья!";
+            result = "<p class='resultWin'>Ничья!</p>";
         }
         else
         if(X > O)
@@ -181,7 +181,7 @@ public class GameServlet extends HttpServlet
             }
         }
 
-        return "<p>Игра окончена!</p><br>"+result+"<a class='resultLength' href='../jsp/index.jsp'>Вернуться</a>";
+        return "<p class='resultEnd'>Игра окончена!</p><br>"+result;
     }
 
     private int lengthSymbol(int[][] pathField, int symbol)
@@ -199,7 +199,11 @@ public class GameServlet extends HttpServlet
                 }
                 else
                 {
-                    break;
+                    if (countResult < currentCircuit)
+                    {
+                        countResult = currentCircuit;
+                    }
+                    currentCircuit = 0;
                 }
             }
             if(countResult<currentCircuit)
@@ -220,7 +224,11 @@ public class GameServlet extends HttpServlet
                 }
                 else
                 {
-                    break;
+                    if (countResult < currentCircuit)
+                    {
+                        countResult = currentCircuit;
+                    }
+                    currentCircuit = 0;
                 }
             }
             if(countResult < currentCircuit)
@@ -265,7 +273,11 @@ public class GameServlet extends HttpServlet
                     }
                     else
                     {
-                        break;
+                        if (countResult < currentCircuit)
+                        {
+                            countResult = currentCircuit;
+                        }
+                        currentCircuit = 0;
                     }
                 }
 
@@ -290,7 +302,11 @@ public class GameServlet extends HttpServlet
                     }
                     else
                     {
-                        break;
+                        if (countResult < currentCircuit)
+                        {
+                            countResult = currentCircuit;
+                        }
+                        currentCircuit = 0;
                     }
                 }
                 //System.out.println(" ");
@@ -322,7 +338,11 @@ public class GameServlet extends HttpServlet
                 }
                 else
                 {
-                    break;
+                    if (countResult < currentCircuit)
+                    {
+                        countResult = currentCircuit;
+                    }
+                    currentCircuit = 0;
                 }
             }
 
@@ -348,7 +368,11 @@ public class GameServlet extends HttpServlet
                 }
                 else
                 {
-                    break;
+                    if (countResult < currentCircuit)
+                    {
+                        countResult = currentCircuit;
+                    }
+                    currentCircuit = 0;
                 }
             }
             System.out.println(" ");

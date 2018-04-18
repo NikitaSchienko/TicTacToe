@@ -19,6 +19,7 @@
         <div id="div_table">
 
         </div>
+        <p><a class='resultLength' href='../jsp/index.jsp'>Вернуться</a><a class='resultLength' href='../jsp/rating.jsp'>Рейтинг</a></p>
     </div>
 </body>
 </html>
